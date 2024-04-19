@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BudgetBuddy"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:orientation="horizontal">
+
+        <!-- SIP RadioButton -->
+        <RadioButton
+            android:id="@+id/sipRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIP"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:checked="false" />
+
+        <!-- Lumpsum RadioButton -->
+        <RadioButton
+            android:id="@+id/lumpsumRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lumpsum"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:checked="true" />
+
+    </RadioGroup>
+
+
+    <!-- EditText for Principle Amount -->
+    <EditText
+        android:id="@+id/principleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Principle Amount"
+        android:textColorHint="@color/black"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:inputType="numberDecimal" />
+
+    <!-- EditText for Time Period -->
+    <EditText
+        android:id="@+id/timePeriodEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/principleEditText"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Time Period (in years)"
+        android:textColorHint="@color/black"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:inputType="numberDecimal" />
+
+    <!-- EditText for Interest Rate -->
+    <EditText
+        android:id="@+id/interestRateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePeriodEditText"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="Interest (Default = 8%)"
+        android:textColorHint="@color/black"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:inputType="numberDecimal" />
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interestRateEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@color/dark_blue" />
+
+    <!-- Result TextView -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="30sp"
+        android:textColor="@color/dark_grey" />
+
+</RelativeLayout>

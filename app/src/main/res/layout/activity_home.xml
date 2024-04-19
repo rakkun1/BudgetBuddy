@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".HomeActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BudgetBuddy"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Container for Transactions -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Buttons for Cash In and Cash Out -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Cash In Button -->
+            <Button
+                android:id="@+id/cashInButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cash In"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@color/holo_green_dark"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Cash Out Button -->
+            <Button
+                android:id="@+id/cashOutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cash Out"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@color/holo_red_dark"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Balance: ₹0.00"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/titleTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Transaction TextView -->
+        <TextView
+            android:id="@+id/transactionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Transactions"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <!-- Invest Button -->
+        <Button
+            android:id="@+id/investButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Invest"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:background="@color/dark_blue"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+        <!-- Convert Button -->
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convert"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:background="@color/dark_blue"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
